@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kortvisning_poc/Screens/map_screen.dart';
+import 'package:kortvisning_poc/Screens/custom_crs_example.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,6 +18,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: const MapScreen(title: 'Show Map Demo'),
+      //home: CustomCrsPage(),
     );
   }
 }
