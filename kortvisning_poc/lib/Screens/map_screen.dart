@@ -51,7 +51,7 @@ class _MapScreenState extends State<MapScreen> {
       code: 'EPSG:25832',
       proj4Projection: epsg25832,
       resolutions: resolutions,
-      origins: [CustomPoint(0,0)],
+      origins: [CustomPoint(0, 0)],
       scales: null,
       transformation: null,
     );
@@ -61,11 +61,12 @@ class _MapScreenState extends State<MapScreen> {
     print('point: $point');
 
     // EPSG:4326 is a predefined projection ships with proj4dart
-     epsg4326 = proj4.Projection.get('EPSG:4326')!;
+    epsg4326 = proj4.Projection.get('EPSG:4326')!;
 
-    print('Which is (${epsg25832.transform(epsg4326, point).x.toStringAsFixed(2)}, ${epsg25832.transform(epsg4326, point).y.toStringAsFixed(2)}) in EPSG:4326.');
+    print(
+        'Which is (${epsg25832.transform(epsg4326, point).x.toStringAsFixed(2)}, ${epsg25832.transform(epsg4326, point).y.toStringAsFixed(2)}) in EPSG:4326.');
     print(epsg25832.transform(epsg4326, point));
-     //epsg4326.transform(epsg25832CRS, point);
+    //epsg4326.transform(epsg25832CRS, point);
 
     point_transformed = epsg25832.transform(epsg4326, point);
     print('epsg4326: $point_transformed');
@@ -85,26 +86,29 @@ class _MapScreenState extends State<MapScreen> {
               options: MapOptions(
                 crs: epsg25832CRS,
                 //center: LatLng(epsg25832.transform(epsg4326, point).y, epsg25832.transform(epsg4326, point).x),
-                center: LatLng(point_transformed.y, point_transformed.x),
-                zoom: 1.0,
+                //center: LatLng(point_transformed.y, point_transformed.x),
+                center: LatLng(-15.419022, 88.829566),
+                zoom: 10,
                 maxZoom: maxZoom,
+                onTap: (tapPosition, point) => {
+                  print(point.toString()),
+                },
               ),
               layers: [
                 TileLayerOptions(
                   additionalOptions: {
-                    'username' : 'MBAWETWOSQ',
-                    'password' : 'HestPlastikMule!985',
-                    'service' : 'WMTS',
+                    'username': 'MBAWETWOSQ',
+                    'password': 'HestPlastikMule!985',
+                    'service': 'WMTS',
                     'request': 'GetTile',
-                    'version' : '1.0.0',
-                    'format' : 'image%2Fjpeg',
-                    'layer' : 'topo_skaermkort',
-                    'style' : 'default',
-                    'tilematrixset' : 'View1',
+                    'version': '1.0.0',
+                    'format': 'image%2Fjpeg',
+                    'layer': 'topo_skaermkort',
+                    'style': 'default',
+                    'tilematrixset': 'View1',
                     // 'tilematrix' : '0',
                     // 'tilerow' : '0',
                     // 'tilecol' : '1',
-
                   },
                   // wmsOptions: WMSTileLayerOptions(
                   //   crs: epsg25832CRS,
@@ -123,7 +127,7 @@ class _MapScreenState extends State<MapScreen> {
                   // ),
 
                   urlTemplate:
-                     "https://services.datafordeler.dk/DKskaermkort/topo_skaermkort_wmts/1.0.0/Wmts?USERNAME={username}&PASSWORD={password}&SERVICE={service}&VERSION={version}&REQUEST={request}&FORMAT={format}&LAYER={layer}&STYLE={style}&TILEMATRIXSET={tilematrixset}&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}",
+                      "https://services.datafordeler.dk/DKskaermkort/topo_skaermkort_wmts/1.0.0/Wmts?USERNAME={username}&PASSWORD={password}&SERVICE={service}&VERSION={version}&REQUEST={request}&FORMAT={format}&LAYER={layer}&STYLE={style}&TILEMATRIXSET={tilematrixset}&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}",
                   //"https://services.datafordeler.dk/DKskaermkort/topo_skaermkort_wmts/1.0.0/Wmts?USERNAME={username}&PASSWORD={password}&SERVICE={service}&VERSION={version}&REQUEST={request}&FORMAT={format}&LAYER={layer}&STYLE={style}&TILEMATRIXSET={tilematrixset}&TILEMATRIX={tilematrix}&TILEROW={tilerow}&TILECOL={tilecol}",
                   //tileProvider: const NonCachingNetworkTileProvider(),
                 ),
