@@ -10,12 +10,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92da015e-5349-42cf-9b8e-60918327c7c4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../bitcoin_ticker_flutter" beforeDir="false" afterPath="$PROJECT_DIR$/../bitcoin_ticker_flutter" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bmi_calculator_flutter" beforeDir="false" afterPath="$PROJECT_DIR$/../bmi_calculator_flutter" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../clima_flutter" beforeDir="false" afterPath="$PROJECT_DIR$/../clima_flutter" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../destini_challenge_starting" beforeDir="false" afterPath="$PROJECT_DIR$/../destini_challenge_starting" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dicee_flutter" beforeDir="false" afterPath="$PROJECT_DIR$/../dicee_flutter" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../flash_chat_flutter" beforeDir="false" afterPath="$PROJECT_DIR$/../flash_chat_flutter" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dart_tool/package_config_subset" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config_subset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dart_tool/version" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/version" afterDir="false" />
@@ -30,14 +24,12 @@
       <change beforePath="$PROJECT_DIR$/android/.gradle/6.7/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/6.7/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/android/local.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/GeneratedPluginRegistrant.h" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/GeneratedPluginRegistrant.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/GeneratedPluginRegistrant.m" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/GeneratedPluginRegistrant.m" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/Screens/map_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Screens/map_screen.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../magic_8_ball_flutter" beforeDir="false" afterPath="$PROJECT_DIR$/../magic_8_ball_flutter" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mi_card_flutter" beforeDir="false" afterPath="$PROJECT_DIR$/../mi_card_flutter" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../navigation_flutter_demo" beforeDir="false" afterPath="$PROJECT_DIR$/../navigation_flutter_demo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quizzler_flutter" beforeDir="false" afterPath="$PROJECT_DIR$/../quizzler_flutter" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../xylophone_flutter" beforeDir="false" afterPath="$PROJECT_DIR$/../xylophone_flutter" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -28,7 +28,7 @@ class _MapScreenState extends State<MapScreen> {
     var epsg25832 =
         proj4.Projection.add('EPSG:25832', '+proj=utm +zone=32 +ellps=GRS80 +units=m +no_defs');
 
-    // 9 example zoom level resolutions
+    // zoom level resolutions
     final resolutions = <double>[
       32768,
       16384,
@@ -43,6 +43,7 @@ class _MapScreenState extends State<MapScreen> {
       32,
       16,
       8,
+      4
     ];
 
     maxZoom = (resolutions.length - 1).toDouble();
@@ -87,8 +88,8 @@ class _MapScreenState extends State<MapScreen> {
                 crs: epsg25832CRS,
                 //center: LatLng(epsg25832.transform(epsg4326, point).y, epsg25832.transform(epsg4326, point).x),
                 //center: LatLng(point_transformed.y, point_transformed.x),
-                center: LatLng(-15.419022, 88.829566),
-                zoom: 10,
+                center: LatLng(-15.343678, 88.97539),
+                zoom: 1,
                 maxZoom: maxZoom,
                 onTap: (tapPosition, point) => {
                   print(point.toString()),
@@ -106,30 +107,9 @@ class _MapScreenState extends State<MapScreen> {
                     'layer': 'topo_skaermkort',
                     'style': 'default',
                     'tilematrixset': 'View1',
-                    // 'tilematrix' : '0',
-                    // 'tilerow' : '0',
-                    // 'tilecol' : '1',
                   },
-                  // wmsOptions: WMSTileLayerOptions(
-                  //   crs: epsg25832CRS,
-                  //   format: 'image/png',
-                  //   version: '1.3.0',
-                  //   transparent: true,
-                  //   uppercaseBoolValue: false,
-                  //   styles: [
-                  //     'default'
-                  //   ],
-                  //   baseUrl:'https://services.datafordeler.dk/Dkskaermkort/topo_skaermkort/1.0.0/wms?USERNAME=MBAWETWOSQ&PASSWORD=HestPlastikMule!985',
-                  //   layers: [
-                  //     'topo_skaermkort'
-                  //   ]
-                  //
-                  // ),
-
                   urlTemplate:
                       "https://services.datafordeler.dk/DKskaermkort/topo_skaermkort_wmts/1.0.0/Wmts?USERNAME={username}&PASSWORD={password}&SERVICE={service}&VERSION={version}&REQUEST={request}&FORMAT={format}&LAYER={layer}&STYLE={style}&TILEMATRIXSET={tilematrixset}&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}",
-                  //"https://services.datafordeler.dk/DKskaermkort/topo_skaermkort_wmts/1.0.0/Wmts?USERNAME={username}&PASSWORD={password}&SERVICE={service}&VERSION={version}&REQUEST={request}&FORMAT={format}&LAYER={layer}&STYLE={style}&TILEMATRIXSET={tilematrixset}&TILEMATRIX={tilematrix}&TILEROW={tilerow}&TILECOL={tilecol}",
-                  //tileProvider: const NonCachingNetworkTileProvider(),
                 ),
               ],
             ),
