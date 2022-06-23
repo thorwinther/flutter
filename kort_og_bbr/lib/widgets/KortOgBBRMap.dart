@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
-import 'package:kort_og_bbr/components/DKProjection.dart';
-import 'package:latlong2/latlong.dart';
-import 'package:kort_og_bbr/plugins/scale_layer_plugin_option.dart';
 import 'package:flutter_map/plugin_api.dart';
+import 'package:kort_og_bbr/components/DKProjection.dart';
+import 'package:kort_og_bbr/components/TileLayerList.dart';
+import 'package:kort_og_bbr/plugins/scale_layer_plugin_option.dart';
 import 'package:kort_og_bbr/plugins/zoombuttons_plugin_option.dart';
+import 'package:latlong2/latlong.dart';
 
 class KortOgBBRMap extends StatelessWidget {
   final dkprojection = DKProjection();
+  final List<TileLayerOptions> layers = TileLayerList().layers;
 
   @override
   Widget build(BuildContext context) {
@@ -25,23 +27,7 @@ class KortOgBBRMap extends StatelessWidget {
           ZoomButtonsPlugin(),
         ],
       ),
-      layers: [
-        TileLayerOptions(
-            additionalOptions: {
-              'username': 'MBAWETWOSQ',
-              'password': 'HestPlastikMule!985',
-              'service': 'WMTS',
-              'request': 'GetTile',
-              'version': '1.0.0',
-              'format': 'image%2Fjpeg',
-              'layer': 'topo_skaermkort',
-              'style': 'default',
-              'tilematrixset': 'View1',
-            },
-            urlTemplate:
-                "https://services.datafordeler.dk/DKskaermkort/topo_skaermkort_wmts/1.0.0/Wmts?USERNAME={username}&PASSWORD={password}&SERVICE={service}&VERSION={version}&REQUEST={request}&FORMAT={format}&LAYER={layer}&STYLE={style}&TILEMATRIXSET={tilematrixset}&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}",
-            tileProvider: NetworkTileProvider()),
-      ],
+      layers: layers,
       nonRotatedLayers: [
         ScaleLayerPluginOption(
           lineColor: Colors.blue,
